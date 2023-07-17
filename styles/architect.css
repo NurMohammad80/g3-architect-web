@@ -225,6 +225,7 @@
      }
      .ten-year-badge{
         max-width: 270px;
+        position: static;
      }
      .teams-img-container {
          grid-template-columns: 1fr;
