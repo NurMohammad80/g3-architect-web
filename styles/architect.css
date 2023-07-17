@@ -113,47 +113,97 @@
      color: #FF900E;
      font-weight: 700;
  }
- .fact-cards-container{
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
+
+ /* Feature styles */
+ .feature {
+     display: flex;
+     gap: 130px;
+     margin-top: 100px;
  }
+
+ .feature-content .section-title {
+     border-left: 5px solid #FF900E;
+     padding-left: 20px;
+ }
+
+ .feature .card {
+     border-radius: 8px;
+     background: #FFF;
+     box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+     padding: 30px;
+     margin-bottom: 20px;
+ }
+
+.feature-img img{
+   height: 90%;
+   margin-left: 90px;
+}
+
+.ten-year-badge {
+    border-radius: 8px;
+    background: #FF900E;
+    width: 340px;
+    color: #FFF;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    bottom: 100px;
+}
+.ten-year-badge h3{
+   font-size: 4.0625rem;
+   font-weight: 700;
+   color: #FFF;
+   margin: 0;
+}
+.ten-year-badge p{
+   font-size: 1.5625rem;
+   font-weight: 500;
+}
+
+ .fact-cards-container {
+     display: flex;
+     justify-content: space-around;
+     text-align: center;
+ }
+
  .fact-cards-container .card {
      border-radius: 8px;
      border: 1px solid #FF900E;
      padding: 30px;
 
  }
- .fact-cards-container .card-title{
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-top: 1px;
+
+ .fact-cards-container .card-title {
+     font-size: 1.25rem;
+     font-weight: 600;
+     margin-top: 1px;
  }
 
- .fact-cards-container .card-stats{
-    font-size: 2.8125rem;
-    font-weight: 600;
-    color: #424242;
-    margin-top: 10px;
-    margin-bottom: 10px;
+ .fact-cards-container .card-stats {
+     font-size: 2.8125rem;
+     font-weight: 600;
+     color: #424242;
+     margin-top: 10px;
+     margin-bottom: 10px;
  }
 
-     /* sponsor styles */
+ /* sponsor styles */
 
-.sponsors-container{
-    text-align: center;
-} 
+ .sponsors-container {
+     text-align: center;
+ }
 
-.sponsor-img-container{
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 50px;
-    align-items: center;
-    gap: 30px;
-}
-.sponsor-img-container img{
-    width: 165px;
-}
+ .sponsor-img-container {
+     display: flex;
+     justify-content: space-evenly;
+     margin-top: 50px;
+     align-items: center;
+     gap: 30px;
+ }
+
+ .sponsor-img-container img {
+     width: 165px;
+ }
 
  /* Header media QUERIES */
  /* For Mobile devices */
@@ -164,11 +214,18 @@
 
      nav,
      .teams-container,
+     .feature,
      .fact-cards-container,
      .sponsor-img-container {
          flex-direction: column;
      }
-
+     .feature-img img{
+        width: 90%;
+        margin-left: 0;
+     }
+     .ten-year-badge{
+        max-width: 270px;
+     }
      .teams-img-container {
          grid-template-columns: 1fr;
      }
@@ -178,8 +235,9 @@
          padding-left: 20px;
          padding-right: 20px;
      }
-     .fact-cards-container{
-        gap: 20px;
+
+     .fact-cards-container {
+         gap: 20px;
      }
 
  }
@@ -191,7 +249,13 @@
      }
 
      nav,
-     .teams-container {
+     .teams-container,
+     .sponsor-img-container,
+     .feature {
          flex-direction: column;
+     }
+
+     .feature-img img{
+        width: 90%;
      }
  }
